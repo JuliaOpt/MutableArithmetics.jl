@@ -25,8 +25,6 @@ macro test_macro_throws(error, m)
     end
 end
 
-include("dummy.jl")
-
 function error_test(x, y, z)
     # $(:(y[j=1])) does not print the same on Julia v1.3 or Julia 1.4
     err = ErrorException("Unexpected assignment in expression `$(:(y[j=1]))`.")
